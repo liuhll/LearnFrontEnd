@@ -1,0 +1,103 @@
+@charset "UTF-8";
+
+@test_width:300px;
+
+/*
+***************************
+ *    混合的学习          *
+ *************************
+*/
+
+//混合的使用
+.box{
+  width:@test_width;
+  height: @test_width;
+  background-color: yellow;
+
+  .border;
+}
+
+//混合
+.border{
+  border: 1px solid black;
+}
+
+//混合 带参数
+.border_02(@border_width){
+  border: @border_width solid yellow;
+}
+
+.test_hubhe{
+  .border_02(30px)
+}
+
+//混合 带默认值
+.border_03(@test_width:10px){
+  border: @test_width solid red;
+}
+
+.test_hunhe_03{
+  .border_03();
+}
+
+.test_hunhe_04{
+  .border_03(1px);
+}
+
+//混合的例子,在css3 浏览器适配很有效果
+.border_radius(@radius:5x){
+   -webkit-border-radius: @radius;
+   -moz-border-radius: @radius;
+   border-radius: @radius;
+}
+
+.radius_test{
+  width: 100px;
+  height: 100px;
+  background: green;
+  .border_radius(6px);
+}
+
+/*
+***************************
+ *    混合的学习          *
+ *************************
+*/
+
+.triangle-css{
+  width: 0;
+  height: 0;
+  overflow: hidden;
+
+  border-width: 10px;
+  border-color: red transparent transparent transparent;
+  border-style: solid dashed dashed dashed;
+}
+
+//匹配模式
+.triangle(top,@w:5px,@c:#ccc){
+  border-width: @w;
+  border-color: transparent transparent @c transparent;
+  border-style: dashed dashed solid dashed;
+}
+
+.triangle(bottom,@w:5px,@c:#ccc){
+  border-width: @w;
+  border-color:@c transparent transparent transparent;
+  border-style:solid dashed dashed dashed;
+}
+
+.triangle-top{
+   width: 0;
+   height: 0;
+   overflow: hidden;
+   .triangle(top);
+ }
+
+.triangle-bottom{
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  .triangle(bottom,10px,pink);
+}
+

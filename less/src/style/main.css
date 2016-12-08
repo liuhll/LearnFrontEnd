@@ -1,0 +1,61 @@
+@charset "UTF-8";
+/*
+***************************
+ *    混合的学习          *
+ *************************
+*/
+.box {
+  width: 300px;
+  height: 300px;
+  background-color: yellow;
+  border: 1px solid black;
+}
+.border {
+  border: 1px solid black;
+}
+.test_hubhe {
+  border: 30px solid #ffff00;
+}
+.test_hunhe_03 {
+  border: 10px solid #ff0000;
+}
+.test_hunhe_04 {
+  border: 1px solid #ff0000;
+}
+.radius_test {
+  width: 100px;
+  height: 100px;
+  background: green;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+}
+/*
+***************************
+ *    混合的学习          *
+ *************************
+*/
+.triangle-css {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  border-width: 10px;
+  border-color: red transparent transparent transparent;
+  border-style: solid dashed dashed dashed;
+}
+.triangle-top {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  border-width: 5px;
+  border-color: transparent transparent #cccccc transparent;
+  border-style: dashed dashed solid dashed;
+}
+.triangle-bottom {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  border-width: 10px;
+  border-color: #ffc0cb transparent transparent transparent;
+  border-style: solid dashed dashed dashed;
+}
